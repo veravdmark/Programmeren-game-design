@@ -52,6 +52,16 @@ class Muis {
     ellipse(90,40,5,5);
     fill('black');
     ellipse(110,40,5,5);
+    fill('black');
+    ellipse(100,52,25,20);
+    fill('grey');
+    ellipse(60,30,50,50)
+    fill('grey');
+    ellipse(140,30,50,50);
+    fill('rosybrown');
+    ellipse(60,30,40,40);
+    fill('rosybrown');
+    ellipse(140,30,40,40);
     fill('red');
     pop();
   }
@@ -92,7 +102,7 @@ function setup() {
 }
 
 function draw() {
-  background('steelblue');
+  background('sienna');
   gup.ren();
   gup.teken();
 
