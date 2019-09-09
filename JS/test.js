@@ -53,7 +53,7 @@ class Muis {
     fill('black');
     ellipse(110,40,5,5);
     fill('black');
-    ellipse(100,52,25,20);
+    ellipse(100,52,20,20);
     fill('grey');
     ellipse(60,30,50,50)
     fill('grey');
