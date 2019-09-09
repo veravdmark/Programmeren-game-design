@@ -1,2 +1,10 @@
-De regels van mijn spel:
-
+De regels van mijn spel "Cheese Hunt":
+De bedoeling is dat jij, 
+als muis zijnde, probeert om van de linkerkant 
+van het scherm naar de rechterkant, richting je muizenholletje te rennen. 
+Onderweg moet je alle stukjes kaas verzamelen. 
+Klinkt als een simpele opdracht maar op weg terug naar je holletje is er een kat die het op jou heeft gemunt. 
+Lukt het je om alle stukjes kaas te verzamelen en binnen de tijd terug naar je holletje te komen? 
+Dan ga je door naar level 2 en wordt het steeds een stapje moeilijker doordat er steeds meer katten 
+bijkomen. Lukt het niet om de katten te ontwijken of alle stukjes kaas binnen de tijd binnen te slepen? 
+Dan is het game over. 
