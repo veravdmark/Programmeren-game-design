@@ -1,18 +1,10 @@
-var muis;
-var muisX;
-var muisY;
-
-function preload();
-muis = loadImage("Plaatjes/Muis.png");
-
 function setup() {
     var myCanvas = createCanvas(1000,500);
     background('lightblue');
     myCanvas.parent('processing');
     noLoop();
     raster = new Raster(5,10);
-    muisX = 150;
-    muisY = 100;
+
 }
 
 function draw() {
