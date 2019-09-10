@@ -1,3 +1,13 @@
+//var kaas = new Array ["jongekaas","oudekaas","komijnenkaas","geitenkaas","schapenkaas"];
+//var kaas1 = "jongekaas";
+//var kaas2 = "oudekaas";
+//var kaas = [];
+//var aantalKaas = 5;
+
+//for(kaas=1;kaas<=5;n++) {
+//    teken();
+//}
+
 function setup() {
 var myCanvas = createCanvas(1000,500);
 background('lightblue');
@@ -13,6 +23,7 @@ class Muis {
     this.gegeten = 0;
   }
 
+
   ren() {
     if (keyIsDown(UP_ARROW)) {
       this.y -= this.snelheid;
@@ -26,6 +37,7 @@ class Muis {
     if (keyIsDown(LEFT_ARROW)) {
         this.y += this.snelheid;
     }
+
     this.x += this.snelheid;
   }
 
@@ -42,12 +54,8 @@ class Muis {
     push();
     noStroke();
     translate(this.x,this.y);
-    //fill('yellow');
-    //triangle(0,0,0,100,50,50);
     fill('grey');
     ellipse(100,50,50);
-    //fill('steelblue')
-    //triangle(145,60,165,50,165,70);
     fill('black');
     ellipse(90,40,5,5);
     fill('black');
@@ -85,6 +93,10 @@ class Kaas {
     translate(this.x,this.y);
     fill('yellow');
     triangle(0,0,20,30,30,10);
+    fill('black');
+    ellipse(15,15,5,5);
+    fill('black');
+    ellipse(20,20,3,3);
     pop();
   }
 }
@@ -95,31 +107,40 @@ function setup() {
   frameRate(10);
   textFont("Verdana");
   textSize(90);
-  gup = new Muis();
+  muis = new Muis();
   oudekaas = new Kaas(40);
   jongekaas = new Kaas(40);
-  //kaas2 = new Kaas(1);
 }
 
 function draw() {
   background('sienna');
-  gup.ren();
-  gup.teken();
+  muis.ren();
+  muis.teken();
 
   oudekaas.beweeg();
   oudekaas.teken();
 
-  if (gup.eet(oudekaas)) {
-    gup.x = -170;
-    gup.gegeten++;
-    gup.snelheid += 3;
+  jongekaas.beweeg();
+  jongekaas.teken();
+
+  if (muis.eet(oudekaas)) {
+    muis.x = -170;
+    muis.gegeten++;
+    muis.snelheid += 3;
     oudekaas.y = random(100,500);
   }
-  if (gup.x>800) {
+  if (muis.x>800) {
     background('red');
     textSize(30);
     text("Helaas, geen kaas voor jou!",5,24);
     noLoop();
   }
-  text(gup.gegeten,5,70);
+  //if (muis = 0) {
+   //   constrain();
+ // }
+
+  //if (muis = 500) {
+      //constrain();
+ // }
+  text(muis.gegeten,5,70);
 }
