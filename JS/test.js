@@ -25,20 +25,20 @@ class Muis {
     if (keyIsDown(DOWN_ARROW)) {
       this.y += this.snelheid;
     }
-    if (keyIsDown(RIGHT_ARROW)) {
-        this.x += this.snelheid;
-    }
-    if (keyIsDown(LEFT_ARROW)) {
-        this.x += this.snelheid;
-    }
+   // if (keyIsDown(RIGHT_ARROW)) {
+     //   this.x += this.snelheid;
+    //}
+   // if (keyIsDown(LEFT_ARROW)) {
+     //   this.x += this.snelheid;
+    //}
 
-    //this.x += this.snelheid;
+    this.x += this.snelheid;
   }
 
   eet(kaas) {
       var hulp = dist(this.x,this.y,kaas.x,kaas.y);
-      text("afstand:"+round(hulp),20,80);
-    if (dist(this.x,this.y,kaas.x,kaas.y) < 20) {
+      //text("afstand:"+round(hulp),20,80);
+    if (dist(this.x,this.y,kaas.x,kaas.y) < 90) {
       return true;
     }
     else {
@@ -73,8 +73,8 @@ class Muis {
 
 class Kaas {
   constructor(d) {
-    this.x = random(700,800);
-    this.y = random(100,500);
+    this.x = random(100,800);
+    this.y = random(100,600);
     this.diameter = d;
   }
 
@@ -99,7 +99,7 @@ function setup() {
   textFont("Verdana");
   textSize(90);
   muis = new Muis();
-  oudekaas = new Kaas(40);
+  oudekaas = new Kaas();
   jongekaas = new Kaas(40);
 
 }
@@ -135,3 +135,4 @@ function draw() {
  // }
   text(muis.gegeten,5,70);
 }
+
