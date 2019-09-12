@@ -108,6 +108,7 @@ function draw() {
   background('sienna');
   muis.ren();
   muis.teken();
+  //
 
 
   oudekaas.teken();
