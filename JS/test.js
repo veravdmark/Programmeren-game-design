@@ -8,16 +8,10 @@
 //    teken();
 //}
 
-function setup() {
-var myCanvas = createCanvas(1000,500);
-background('lightblue');
-myCanvas.parent('processing');
-noLoop();
-}
 
 class Muis {
   constructor() {
-    this.x = -170;
+    this.x = 170;
     this.y = 100;
     this.snelheid = 10;
     this.gegeten = 0;
@@ -32,17 +26,19 @@ class Muis {
       this.y += this.snelheid;
     }
     if (keyIsDown(RIGHT_ARROW)) {
-        this.y += this.snelheid;
+        this.x += this.snelheid;
     }
     if (keyIsDown(LEFT_ARROW)) {
-        this.y += this.snelheid;
+        this.x += this.snelheid;
     }
 
-    this.x += this.snelheid;
+    //this.x += this.snelheid;
   }
 
-  eet(p) {
-    if (dist(this.x + 155,this.y + 60,p.x,p.y) < 20) {
+  eet(kaas) {
+      var hulp = dist(this.x,this.y,kaas.x,kaas.y);
+      text("afstand:"+round(hulp),20,80);
+    if (dist(this.x,this.y,kaas.x,kaas.y) < 20) {
       return true;
     }
     else {
@@ -82,11 +78,6 @@ class Kaas {
     this.diameter = d;
   }
 
- beweeg() {
-   this.x = constrain(this.x,700,800);
-   this.y = constrain(this.y,20,580);
-  }
-
   teken() {
     push();
     noStroke();
@@ -110,6 +101,7 @@ function setup() {
   muis = new Muis();
   oudekaas = new Kaas(40);
   jongekaas = new Kaas(40);
+
 }
 
 function draw() {
@@ -117,11 +109,9 @@ function draw() {
   muis.ren();
   muis.teken();
 
-  oudekaas.beweeg();
-  oudekaas.teken();
 
-  jongekaas.beweeg();
-  jongekaas.teken();
+  oudekaas.teken();
+  //jongekaas.teken();
 
   if (muis.eet(oudekaas)) {
     muis.x = -170;
