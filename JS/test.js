@@ -1,14 +1,3 @@
-//var kaas = new Array ["jongekaas","oudekaas","komijnenkaas","geitenkaas","schapenkaas"];
-//var kaas1 = "jongekaas";
-//var kaas2 = "oudekaas";
-//var kaas = [];
-//var aantalKaas = 5;
-
-//for(kaas=1;kaas<=5;n++) {
-//    teken();
-//}
-
-
 class Muis {
   constructor() {
     this.x = -100;
@@ -25,12 +14,7 @@ class Muis {
     if (keyIsDown(DOWN_ARROW)) {
       this.y += this.snelheid;
     }
-   // if (keyIsDown(RIGHT_ARROW)) {
-     //   this.x += this.snelheid;
-    //}
-   // if (keyIsDown(LEFT_ARROW)) {
-     //   this.x += this.snelheid;
-    //}
+
 
     this.x += this.snelheid;
   }
@@ -38,7 +22,7 @@ class Muis {
   eet(kaas) {
       var hulp = dist(this.x,this.y,kaas.x,kaas.y);
       //text("afstand:"+round(hulp),20,80);
-    if (dist(this.x,this.y,kaas.x,kaas.y) < 90) {
+    if (dist(this.x,this.y,kaas.x,kaas.y) < 80) {
       return true;
     }
     else {
@@ -48,7 +32,8 @@ class Muis {
 
   teken() {
     push();
-    noStroke();
+    stroke('dimgrey');
+    strokeWeight(1);
     translate(this.x,this.y);
     fill('grey');
     ellipse(100,50,50);
@@ -80,7 +65,8 @@ class Kaas {
 
   teken() {
     push();
-    noStroke();
+    stroke('peru');
+    strokeWeight(1);
     translate(this.x,this.y);
     fill('yellow');
     triangle(0,0,20,30,30,10);
@@ -108,11 +94,11 @@ function draw() {
   background('sienna');
   muis.ren();
   muis.teken();
-  //
+
 
 
   oudekaas.teken();
-  //jongekaas.teken();
+
 
   if (muis.eet(oudekaas)) {
     muis.x = -100;
@@ -122,18 +108,15 @@ function draw() {
     oudekaas.x = random(100,800);
   }
   if (muis.x>800) {
-    background('red');
-    textSize(30);
-    text("Helaas, geen kaas voor jou!",5,24);
+    background('yellow');
+    textFont("Verdana");
+    textSize(90);
+    //textSize(30);
+    text("Helaas, geen kaas!",20,300);
     noLoop();
   }
-  //if (muis = 0) {
-   //   constrain();
- // }
 
-  //if (muis = 500) {
-      //constrain();
- // }
   text(muis.gegeten,5,70);
 }
+
 
