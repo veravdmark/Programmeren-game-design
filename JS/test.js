@@ -11,7 +11,7 @@
 
 class Muis {
   constructor() {
-    this.x = 170;
+    this.x = -100;
     this.y = 100;
     this.snelheid = 10;
     this.gegeten = 0;
@@ -115,10 +115,11 @@ function draw() {
   //jongekaas.teken();
 
   if (muis.eet(oudekaas)) {
-    muis.x = -170;
+    muis.x = -100;
     muis.gegeten++;
     muis.snelheid += 3;
-    oudekaas.y = random(100,500);
+    oudekaas.y = random(100,600);
+    oudekaas.x = random(100,800);
   }
   if (muis.x>800) {
     background('red');
