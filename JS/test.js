@@ -94,8 +94,8 @@ function setup() {
 function draw() {
   background('sienna');
   textFont("Verdana");
-  textSize(90);
-  text("Probeer zoveel mogelijk kaasjes te pakken!",10,170);
+  textSize(20);
+  text("Je hebt honger... Probeer de kaasjes te pakken te krijgen!",300,30);
   muis.ren();
   muis.teken();
 
@@ -118,5 +118,7 @@ function draw() {
     noLoop();
   }
 
-  text(muis.gegeten,5,70);
+  textSize(90);
+  text(muis.gegeten,5,80);
+
 }
