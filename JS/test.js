@@ -6,7 +6,6 @@ class Muis {
     this.gegeten = 0;
   }
 
-
   ren() {
     if (keyIsDown(UP_ARROW)) {
       this.y -= this.snelheid;
@@ -15,14 +14,11 @@ class Muis {
       this.y += this.snelheid;
     }
 
-
     this.x += this.snelheid;
   }
 
-
   eet(kaas) {
       var hulp = dist(this.x,this.y,kaas.x,kaas.y);
-      //text("afstand:"+round(hulp),20,80);
     if (dist(this.x,this.y,kaas.x,kaas.y) < 80) {
       return true;
     }
@@ -64,7 +60,6 @@ class Kaas {
     this.diameter = d;
   }
 
-
   teken() {
     push();
     stroke('peru');
@@ -88,7 +83,6 @@ function setup() {
   textSize(90);
   muis = new Muis();
   oudekaas = new Kaas();
-  jongekaas = new Kaas(40);
 }
 
 function draw() {
@@ -107,18 +101,16 @@ function draw() {
     muis.snelheid += 3;
     oudekaas.y = random(100,600);
     oudekaas.x = random(100,800);
-
   }
+
   if (muis.x>800) {
     background('yellow');
     textFont("Verdana");
     textSize(90);
-    //textSize(30);
     text("Helaas, geen kaas!",20,300);
     noLoop();
   }
 
   textSize(90);
   text(muis.gegeten,5,80);
-
 }
