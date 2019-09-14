@@ -1,10 +1,13 @@
-De regels van mijn spel "Cheese Hunt":
-De bedoeling is dat jij, 
-als muis zijnde, probeert om van de linkerkant 
-van het scherm naar de rechterkant, richting je muizenholletje te rennen. 
-Onderweg moet je alle stukjes kaas verzamelen. 
-Klinkt als een simpele opdracht maar op weg terug naar je holletje is er een kat die het op jou heeft gemunt. 
-Lukt het je om alle stukjes kaas te verzamelen en binnen de tijd terug naar je holletje te komen? 
-Dan ga je door naar level 2 en wordt het steeds een stapje moeilijker doordat er steeds meer katten 
-bijkomen. Lukt het niet om de katten te ontwijken of alle stukjes kaas binnen de tijd binnen te slepen? 
-Dan is het game over. 
+"Cheese Hunt": het idee erachter en de simpele spelregels.
+
+Muizen zijn hyperactieve beestjes die binnen no time van de ene kant naar de andere kant van de kamer kunnen racen.
+In dit spel ben jij zo'n muis.
+Je probeert, terwijl je hard aan het rennen bent van de linkerkant naar de rechterkant, elk stukje kaas mee te pakken.
+Voor de besturing van het spel gebruik je de bovenste en de onderste pijltjestoetsen om omhoog en omlaag te bewegen.
+Als het je is gelukt om een stukje kaas op te eten, ga je door naar het volgende level.
+Het gegeten stukje kaas heeft je zoveel energie gegeven, dat je steeds harder gaat rennen.
+Zo werkt dit bij elk gehaalde level.
+Toch zit hier ook een keerzijde aan: hoe sneller je rent, hoe moeilijker het wordt om de stukjes kaas te pakken te krijgen.
+Op het moment dat het je niet meer lukt om een stukje kaas te pakken te krijgen, is het GAME OVER.
+Vanaf dat moment is je energielevel weer terug bij 0, en begint het hele verhaal weer opnieuw.
+Hoeveel stukjes kaas krijg jij te pakken?
